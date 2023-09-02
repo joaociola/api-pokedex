@@ -1,13 +1,24 @@
 {
-  "name": "nodejs-app",
+  "name": "resolucao-desafio-m03",
   "version": "1.0.0",
-  "description": "A minimal Node.js web application.",
+  "description": "",
   "main": "index.js",
-  "author": "alphasec",
-  "license": "MIT",
-   "dependencies": {
-  },
   "scripts": {
-    "start": "node index.js"
+    "dev": "nodemon ./src/filtros/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^2.5.1",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
