@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/filtros/index.js"
+    "start": "node ./src/index.js"
   },
   "keywords": [],
   "author": "",
