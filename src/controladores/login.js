@@ -6,6 +6,7 @@ require('dotenv').config()
 const login = async (req, res) => {
     const { email, senha } = req.body;
 
+
     if (!email || !senha) {
         return res.status(404).json('É obrigatório email e senha');
     }
@@ -18,7 +19,7 @@ const login = async (req, res) => {
         }
 
         const senhaCorreta = await bcrypt.compare(senha, perfilUsuario.senha);
-
+        console.log(typeof(senhaCorreta));
         if (!senhaCorreta) {
             return res.status(400).json("Email e senha não confere");
         }
@@ -33,6 +34,7 @@ const login = async (req, res) => {
         });
 
     } catch (error) {
+        console.log(error);
         return res.status(400).json(error.message);
     }
 }
