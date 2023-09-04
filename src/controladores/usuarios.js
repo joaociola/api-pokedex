@@ -1,6 +1,10 @@
 const { knex } = require('../conexao');
 const bcrypt = require('bcrypt');
 
+const teste = async (req, res) => {
+    return await knex('usuarios').select("*")
+}
+
 const cadastrarUsuario = async (req, res) => {
     const { nome, email, senha, nome_loja } = req.body;
 
@@ -104,5 +108,6 @@ const atualizarPerfil = async (req, res) => {
 module.exports = {
     cadastrarUsuario,
     obterPerfil,
-    atualizarPerfil
+    atualizarPerfil,
+    teste
 }

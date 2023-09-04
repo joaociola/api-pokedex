@@ -5,7 +5,7 @@ const produtos = require('./controladores/produtos');
 const verificaLogin = require('./filtros/verificaLogin');
 
 const rotas = express();
-
+rotas.get('/', usuarios.teste)
 // cadastro de usuario
 rotas.post('/usuarios', usuarios.cadastrarUsuario);
 
